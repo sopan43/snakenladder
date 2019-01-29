@@ -1,0 +1,19 @@
+<% include ./partials/header %>
+    <div class="row">
+        <h1 style="text-align: center">Add More Snake and Ladder!!</h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/addsnakenladder" method="post">
+                <div class="form-group">
+                    <input class="form-control" type="number" step="1" name="start" placeholder="Enter Start Point" min="1" max="100">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="number" step="1" name="end" placeholder="Enter End Point" min="1" max="100">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Add More</button>
+                </div>
+            </form>
+            <a href="/initDiceRoll" class="btn btn-lg btn-primary btn-block">Roll Dice Initially!!</a>
+        </div>
+    </div>
+<% include ./partials/footer %>

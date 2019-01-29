@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Snake & Ladder</title>
+    <link rel="icon" href="http://i.imgur.com/K3mPv14.jpg" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/users">Snake & Ladder</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <% if(error && error.length >0 ){ %>
+        <div class="alert alert-danger" role="alert">
+            <%= error %>
+        </div>
+        <% }else if(success && success.length >0 ){ %>
+        <div class="alert alert-success" role="alert">
+            <%= success %>
+        </div>
+        <% } %>
+    </div>

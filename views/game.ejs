@@ -1,0 +1,49 @@
+<% include ./partials/header %>
+<div class="container">
+    <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <table class="table" style="text-align: left;">
+            <thead>
+                <tr>
+                    <th> Palyer Id</th>
+                    <th>Current Possition</th>
+                    <th>On Dice Roll</th>
+                    <th>Previous Position</th>
+                </tr>
+            </thead>
+            <% for(var i=0;i<data.length;i++){ %>
+            <tbody>
+                <tr>
+                    <td>
+                        <%=data[i].id %>
+                    </td>
+                    <td>
+                        <%= data[i].position %>
+                        <% if(data[i].special) { %>
+                        *
+                        <% } %>
+                    </td>
+                    <td>
+                        <%= data[i].diceRoll %>
+                    </td>
+                    <td>
+                        <%= data[i].previousPosition %>
+                    </td>
+                </tr>
+            </tbody>
+            <% } %>
+        </table>
+        <p>
+            <% if(!restart) { %>
+            <a href="/game/<%= playerId %>" class="btn btn-primary">Roll Dice! for player <%= playerId %></a>
+            <% } else{ %>
+           
+            <a href="/reset" class="btn btn-primary">Restart</a>
+            <% } %>
+        </p>
+        <hr>
+        <p>
+            * you have got a Ladder or a Snake!
+        </p>
+    </div>
+</div>
+<% include ./partials/footer %>

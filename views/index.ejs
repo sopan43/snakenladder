@@ -1,0 +1,26 @@
+<% include ./partials/header %>
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Welcome To Snake and Ladder!</h1>
+             <% if(players.length === 0){ %>
+            <p><form action="/player/count" method="post">
+                <div class="form-group">
+                    <input class="form-control" type="number" step="1" name="playerCount" placeholder="Please enter the number of players">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit</button>
+                </div>
+            </form>
+            </p>
+            <p>
+            <% } else {%>
+                <a href="/initDiceRoll" class="btn btn-lg btn-primary btn-block">Roll Dice Initially!!</a>
+                <a href="/addsnakenladder" class="btn btn-lg btn-primary btn-block">Add More Snake and Ladder!!</a>
+            <% } %></p>
+        </div>
+    </header>
+
+    
+</div>
+<% include ./partials/footer %>

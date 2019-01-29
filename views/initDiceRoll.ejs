@@ -1,0 +1,33 @@
+<% include ./partials/header %>
+<div class="container">
+    <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <table class="table" style="text-align: left;">
+            <thead>
+                <tr>
+                    <th> Palyer Id</th>
+                    <th>On Initial Dice Roll</th>
+                </tr>
+            </thead>
+            <% for(var i=0;i<data.length;i++){ %>
+            <tbody>
+                <tr>
+                    <td>
+                        <%=data[i].id %>
+                    </td>
+                    <td>
+                        <%= data[i].initialCount %>
+                    </td>
+                </tr>
+            </tbody>
+            <% } %>
+        </table>
+        <p>
+            <% if(playerId != data.length  ){ %>
+            <a href="/rollDice/<%= playerId %>" class="btn btn-primary">Roll Dice! for player <%= playerId %></a>
+            <% } else{%>
+            <a href="/game/<%= data[0].id %>" class="btn btn-primary">Start Game and Roll dice for Player <%= data[0].id %></a>
+            <% } %>
+        </p>
+    </div>
+</div>
+<% include ./partials/footer %>
