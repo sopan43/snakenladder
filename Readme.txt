@@ -10,8 +10,7 @@ Note:-  we use system variables for sensitive information like mongoDB url, data
 -------------------
 	a) open CMD/terminal at the base directory and run "npm install"
 	b) run command "npm start".
-	c) "Connection Established At PORT: 3000" when terminal shows this message open browser and visit "http://127.0.0.1:3000".
-
+	c) Open your favourite browser and visit http://localhost:3000 and have fun!!!
 3)npm libraries 
 ------------------
 a) express
